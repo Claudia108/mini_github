@@ -1,1 +1,8 @@
-<h1>Your Mini-Github Site!</h1>
+<div class="container">
+  <% if current_user %>
+  <h1> <%= current_user.name.capitalize %>,  welcome to your Mini-Github!</h1>
+  <% else %>
+    <h1> Welcome to Mini-Github!</h1>
+    <h4>Please login to access your information!</h4>
+  <% end  %>
+</div>

@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   get '/user/repos', to: 'repos#index'
   get '/gists', to: 'gists#index'
+  get '/users', to: 'users#index'
 end

@@ -11,18 +11,23 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li>
-        <a href="/user/repos">My Repos</a>
-      </li>
-      <li>
-        <a href="/gists">My Gists</a>
-      </li>
-      <li>
-        <a href="/users">All Users</a>
+        <% if current_user %>
+          <a href="/user/repos">My Repos</a>
+        <% else %>
+          <a href="/">My Repos</a>
+        <% end %>
       </li>
       <li>
         <% if current_user %>
-          Hello, <%= current_user.name %>
-          <%= link_to "Logout", logout_path, method: :delete %>
+          <a href="/gists">My Gists</a>
+        <% else %>
+          <a href="/">My Gists</a>
+        <% end %>
+      </li>
+      <li>
+        <% if current_user %>
+          <li><%= link_to "Hello, #{current_user.name}!" %></li>
+          <li><%= link_to "Logout", logout_path, method: :delete %></li>
         <% else %>
           <%= link_to "Sign in with Github", github_login_path %>
         <% end %>

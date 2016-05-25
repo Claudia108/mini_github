@@ -1,6 +1,8 @@
-<h1> My Repos</h1>
-<ul>
-  <% @repos.each do |repo| %>
-  <li><%= link_to repo_name(repo), repo.html_url %> </li>
-  <% end %>
-</ul>
+<div class="container">
+  <h1> My Repos</h1>
+  <ul>
+    <% @repos.each do |repo| %>
+    <li><%= link_to repo_name(repo), repo.html_url, target: "_blank" %> </li>
+    <% end %>
+  </ul>
+</div>

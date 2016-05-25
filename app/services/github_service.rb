@@ -5,25 +5,17 @@ class GithubService
     @connection.headers[:Authorization] = "token #{@user.oauth_token }"
   end
 
-  def get_repos
-    @connection.get "/user/repos"
-  end
-
   def parse(response)
     JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def get_repos
+    @connection.get "/user/repos"
   end
 
   def repos_hash
     parse(get_repos)
   end
-
-  # def get_repo(id)
-  #   @connection.get "/user/repos/:id"
-  # end
-  #
-  # def repo_hash(id)
-  #   parse(get_repo(id))
-  # end
 
   def get_gists
     @connection.get "/gists"
@@ -32,4 +24,12 @@ class GithubService
   def gists_hash
     parse(get_gists)
   end
+
+  # def get_users
+  #   @connection.get "/users"
+  # end
+  #
+  # def users_hash
+  #   parse(get_users)
+  # end
 end

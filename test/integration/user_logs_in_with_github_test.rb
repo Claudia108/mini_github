@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UserLogsInWithGithubTest < ActionDispatch::IntegrationTest
-
   def setup
     Capybara.app = MiniGithub::Application
     stub_omniauth
@@ -16,23 +15,22 @@ class UserLogsInWithGithubTest < ActionDispatch::IntegrationTest
     assert page.has_link?("Logout")
   end
 
-  def stub_omniauth
-    # first, set OmniAuth to run in test mode
-    OmniAuth.config.test_mode = true
-    # then, provide a set of fake oauth data that
-    # omniauth will use when a user tries to authenticate:
-    OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
-      provider: 'github',
-      extra: {
-        raw_info: {
-          uid: "1234",
-          name: "Claudia",
-          username: "claudia",
-        }
-      },
-      credentials: {
-        oauth_token: "fun"
-      }
-    })
-  end
+  # def stub_omniauth
+  #   # first, set OmniAuth to run in test mode
+  #   OmniAuth.config.test_mode = true
+  #   # then, provide a set of fake oauth data that
+  #   # omniauth will use when a user tries to authenticate:
+  #   OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
+  #     provider: 'github',
+  #     uid: "1234",
+  #     info: {
+  #       name: "Claudia",
+  #       nickname: "claudia",
+  #       email: "me@me.com",
+  #     },
+  #     credentials: {
+  #       token: "fun"
+  #     }
+  #   })
+  # end
 end
