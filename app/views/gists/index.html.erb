@@ -1,0 +1,7 @@
+<h1> My Gists</h1>
+<ul>
+  <% @gists.each do |gist| %>
+  <li><%= link_to gist_name(gist), gist.html_url %></li>
+  <% end %>
+
+</ul>

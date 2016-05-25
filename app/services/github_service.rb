@@ -17,7 +17,19 @@ class GithubService
     parse(get_repos)
   end
 
+  # def get_repo(id)
+  #   @connection.get "/user/repos/:id"
+  # end
+  #
+  # def repo_hash(id)
+  #   parse(get_repo(id))
+  # end
+
   def get_gists
-    @connection.get "/user/:username/gists/"
+    @connection.get "/gists"
+  end
+
+  def gists_hash
+    parse(get_gists)
   end
 end

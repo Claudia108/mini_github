@@ -27,12 +27,11 @@ class UserLogsInWithGithubTest < ActionDispatch::IntegrationTest
         raw_info: {
           uid: "1234",
           name: "Claudia",
-          screen_name: "claudia",
+          username: "claudia",
         }
       },
       credentials: {
-        token: "fun",
-        secret: "secretfun"
+        oauth_token: "fun"
       }
     })
   end

@@ -11,6 +11,15 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li>
+        <a href="/user/repos">My Repos</a>
+      </li>
+      <li>
+        <a href="/gists">My Gists</a>
+      </li>
+      <li>
+        <a href="/users">All Users</a>
+      </li>
+      <li>
         <% if current_user %>
           Hello, <%= current_user.name %>
           <%= link_to "Logout", logout_path, method: :delete %>
