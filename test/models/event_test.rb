@@ -6,7 +6,7 @@ class EventTest < ActiveSupport::TestCase
       user = User.new(username: "Claudia108", oauth_token: ENV["USER_TOKEN"] )
       Event.initialize_service(GithubService.new(user))
 
-      assert_equal 3, Event.commit_count
+      assert_equal 6, Event.commit_count
       assert_equal "Claudia108/mini_github", Event.commit_names[0]
     end
   end

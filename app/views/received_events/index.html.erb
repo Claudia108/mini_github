@@ -1,10 +1,10 @@
 <div class="container">
-  <h1>You have <%= @count %> Received Events</h1>
+  <h1>You have <%= @received_events.count %> Received Events</h1>
   <br>
   <h4>You recently received the following events:</h4>
   <ul>
-    <% @received_events.each_with_index do |event, i| %>
-      <li><%= event.contributors[i] %> worked on the Repo <%= event.repo_names[i] %> </li>
+    <% @received_events.each do |event| %>
+      <li><strong><%= contributor(event) %></strong> worked on the Repo <strong><%= repo_names(event) %></strong> </li>
     <% end %>
   </ul>
 </div>

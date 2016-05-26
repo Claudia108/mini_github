@@ -6,7 +6,7 @@ class RepoTest < ActiveSupport::TestCase
       user = User.new(oauth_token: ENV["USER_TOKEN"] )
       Repo.initialize_service(GithubService.new(user))
 
-      assert_equal 28, Repo.all.count
+      assert_equal 29, Repo.all.count
       assert_equal "the_pivot", Repo.all[0][:name]
     end
   end

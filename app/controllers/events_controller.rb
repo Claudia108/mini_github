@@ -9,7 +9,7 @@ class EventsController < ApplicationController
   private
 
   def initialize_events
-  service = GithubService.new(current_user)
-  Event.initialize_service(service)
+    service = GithubService.new(current_user)
+    Event.initialize_service(service)
   end
 end

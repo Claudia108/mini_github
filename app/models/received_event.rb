@@ -11,15 +11,7 @@ class ReceivedEvent < OpenStruct
     end
   end
 
-  def count
+  def self.count
     all.count
-  end
-
-  def repo_names
-    ReceivedEvent.all.map {|event| event[:repo][:name]}
-  end
-
-  def contributors
-    ReceivedEvent.all.map {|event| event[:actor][:login]}
   end
 end

@@ -12,5 +12,4 @@ class GistsController < ApplicationController
   service = GithubService.new(current_user)
   Gist.initialize_service(service)
   end
-
 end

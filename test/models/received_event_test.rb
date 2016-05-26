@@ -7,11 +7,11 @@ class ReceivedEventTest < ActiveSupport::TestCase
       ReceivedEvent.initialize_service(GithubService.new(user))
 
       assert_equal 30, ReceivedEvent.count
-      assert_equal "alirezaandersen", ReceivedEvent.contributors[0]
-      assert_equal "alirezaandersen/the_pivot", ReceivedEvent.repo_names[0]
+      assert_equal "alirezaandersen", ReceivedEvent.all[0][:actor][:login]
+      assert_equal "alirezaandersen/the_pivot", ReceivedEvent.all[0][:repo][:name]
 
-      assert_equal "Salvi6God", ReceivedEvent.contributors[29]
-      assert_equal "alirezaandersen/the_pivot", ReceivedEvent.repo_names[29]
+      assert_equal "Salvi6God", ReceivedEvent.all[29][:actor][:login]
+      assert_equal "alirezaandersen/the_pivot", ReceivedEvent.all[29][:repo][:name]
     end
   end
 end

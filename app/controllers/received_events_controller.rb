@@ -3,7 +3,6 @@ class ReceivedEventsController < ApplicationController
 
   def index
     @received_events = ReceivedEvent.all
-    # @count = ReceivedEvent.repo_names
   end
 
   private
