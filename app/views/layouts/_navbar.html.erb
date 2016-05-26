@@ -33,6 +33,13 @@
       </li>
       <li>
         <% if current_user %>
+          <a href="/users/:username/received_events">Received Events</a>
+        <% else %>
+          <a href="/">Received Events</a>
+        <% end %>
+      </li>
+      <li>
+        <% if current_user %>
           <li><%= link_to "Hello, #{current_user.name}!", user_path %></li>
           <li><%= link_to "Logout", logout_path, method: :delete %></li>
         <% else %>

@@ -4,13 +4,6 @@ class Event < OpenStruct
     @service = service
   end
 
-  # def self.all
-  #   temp_events_hash = @service.events_hash
-  #   temp_events_hash.map do |temp_event_hash|
-  #     Event.new(temp_event_hash)
-  #   end
-  # end
-
   def self.commits
     temp_events_hash = @service.events_hash
     temp_events_hash.select do |temp_event_hash|
@@ -25,5 +18,4 @@ class Event < OpenStruct
   def self.commit_names
     commits.map {|commit| commit[:repo][:name]}
   end
-  #
 end

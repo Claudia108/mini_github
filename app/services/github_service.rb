@@ -29,4 +29,7 @@ class GithubService
     parse(@connection.get "/users/#{@user.username}/events")
   end
 
+  def received_events_hash
+    parse(@connection.get "/users/#{@user.username}/received_events")
+  end
 end
