@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-05-26T13:52:49-06:00">2016-05-26T13:52:49-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-05-26T14:36:29-06:00">2016-05-26T14:36:29-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         8.17
+         8.37
        </span>
     </span> hits/line)
   </h2>
@@ -167,7 +167,7 @@
         <td>11</td>
         <td>11</td>
         <td>0</td>
-        <td>13.8</td>
+        <td>14.3</td>
       </tr>
       
       <tr>
@@ -217,7 +217,7 @@
         <td>19</td>
         <td>19</td>
         <td>0</td>
-        <td>6.1</td>
+        <td>7.1</td>
       </tr>
       
     </tbody>
@@ -340,7 +340,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         11.79
+         11.91
        </span>
     </span> hits/line)
   </h2>
@@ -372,7 +372,7 @@
         <td>11</td>
         <td>11</td>
         <td>0</td>
-        <td>13.8</td>
+        <td>14.3</td>
       </tr>
       
       <tr>
@@ -615,7 +615,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.1
+         7.1
        </span>
     </span> hits/line)
   </h2>
@@ -647,7 +647,7 @@
         <td>19</td>
         <td>19</td>
         <td>0</td>
-        <td>6.1</td>
+        <td>7.1</td>
       </tr>
       
     </tbody>
@@ -1663,8 +1663,8 @@
           <code class="ruby">  def self.commit_names</code>
         </li>
       
-        <li class="covered" data-hits="15" data-linenumber="19">
-          <span class="hits">15</span>
+        <li class="covered" data-hits="20" data-linenumber="19">
+          <span class="hits">20</span>
           
           <code class="ruby">    commits.map {|commit| commit[:repo][:name]}</code>
         </li>
@@ -2113,20 +2113,20 @@
           <code class="ruby">  def initialize(user)</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="3">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="20" data-linenumber="3">
+          <span class="hits">20</span>
           
           <code class="ruby">    @user = user</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="4">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="20" data-linenumber="4">
+          <span class="hits">20</span>
           
           <code class="ruby">    @connection = Faraday.new(url: &quot;https://api.github.com&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="5">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="20" data-linenumber="5">
+          <span class="hits">20</span>
           
           <code class="ruby">    @connection.headers[:Authorization] = &quot;token #{@user.oauth_token}&quot;</code>
         </li>
@@ -2149,8 +2149,8 @@
           <code class="ruby">  def parse(response)</code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="9">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="33" data-linenumber="9">
+          <span class="hits">33</span>
           
           <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
         </li>
@@ -2221,8 +2221,8 @@
           <code class="ruby">  def orgs_hash</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="21">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="21">
+          <span class="hits">7</span>
           
           <code class="ruby">    parse(@connection.get &quot;/users/#{@user.username}/orgs&quot;)</code>
         </li>
@@ -2245,8 +2245,8 @@
           <code class="ruby">  def starred_hash</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="25">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="25">
+          <span class="hits">7</span>
           
           <code class="ruby">    parse(@connection.get &quot;/users/#{@user.username}/starred&quot;).count</code>
         </li>
@@ -2269,8 +2269,8 @@
           <code class="ruby">  def events_hash</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="29">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="29">
+          <span class="hits">5</span>
           
           <code class="ruby">    parse(@connection.get &quot;/users/#{@user.username}/events&quot;)</code>
         </li>
@@ -2293,8 +2293,8 @@
           <code class="ruby">  def received_events_hash</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="33">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="7" data-linenumber="33">
+          <span class="hits">7</span>
           
           <code class="ruby">    parse(@connection.get &quot;/users/#{@user.username}/received_events&quot;)</code>
         </li>
