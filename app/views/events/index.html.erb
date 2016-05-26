@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>You have <%= @count %> Recent Commits</h1>
+  <br>
+  <h4>You recently commited to the following Repos:</h4>
+  <ul>
+    <% @names.each do |name| %>
+      <li><%= name %> </li>
+    <% end %>
+  </ul>
+</div>

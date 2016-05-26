@@ -10,7 +10,7 @@ class GistsController < ApplicationController
 
   def initialize_gist
   service = GithubService.new(current_user)
-  Gist.inititalize_service(service)
+  Gist.initialize_service(service)
   end
 
 end

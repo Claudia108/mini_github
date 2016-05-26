@@ -1,5 +1,5 @@
 class Gist < OpenStruct
-  def self.inititalize_service(service)
+  def self.initialize_service(service)
     @service = service
   end
 
