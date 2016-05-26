@@ -6,7 +6,11 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/">Mini-Github</a>
+    <% if current_user %>
+      <a class="navbar-brand" href="/dashboard">Mini-Github</a>
+    <% else %>
+      <a class="navbar-brand" href="/">Mini-Github</a>
+    <% end %>
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
@@ -26,7 +30,21 @@
       </li>
       <li>
         <% if current_user %>
-          <li><%= link_to "Hello, #{current_user.name}!" %></li>
+          <a href="/users/:username/events">My Commits</a>
+        <% else %>
+          <a href="/">My Commits</a>
+        <% end %>
+      </li>
+      <li>
+        <% if current_user %>
+          <a href="/users/:username/received_events">Received Events</a>
+        <% else %>
+          <a href="/">Received Events</a>
+        <% end %>
+      </li>
+      <li>
+        <% if current_user %>
+          <li><%= link_to "Hello, #{current_user.name}!", user_path %></li>
           <li><%= link_to "Logout", logout_path, method: :delete %></li>
         <% else %>
           <%= link_to "Sign in with Github", github_login_path %>

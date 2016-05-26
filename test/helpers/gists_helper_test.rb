@@ -1,4 +1,4 @@
-require 'test_helper'
+# require 'test_helper'
 
 # class GistsHelperTest < ActionView::TestCase
 #     test "it formats gist names" do

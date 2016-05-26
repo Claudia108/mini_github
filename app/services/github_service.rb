@@ -1,42 +1,35 @@
 class GithubService
   def initialize(user)
     @user = user
-    @connection = Faraday.new(url: "https://api.github.com/")
-    @connection.headers[:Authorization] = "token #{@user.oauth_token }"
+    @connection = Faraday.new(url: "https://api.github.com")
+    @connection.headers[:Authorization] = "token #{@user.oauth_token}"
   end
 
   def parse(response)
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def get_repos
-    @connection.get "/user/repos"
-  end
-
   def repos_hash
-    parse(get_repos)
-  end
-
-  def get_gists
-    @connection.get "/gists"
+    parse(@connection.get "/user/repos")
   end
 
   def gists_hash
-    parse(get_gists)
+    parse(@connection.get "/gists")
   end
 
-  def get_repos_of_user
-    @connection.get "/user/:username/repos"
+  def orgs_hash
+    parse(@connection.get "/users/#{@user.username}/orgs")
   end
 
-  def repos_of_user_hash
-    parse(get_repos_of_user)
+  def starred_hash
+    parse(@connection.get "/users/#{@user.username}/starred").count
   end
-  # def get_users
-  #   @connection.get "/users"
-  # end
-  #
-  # def users_hash
-  #   parse(get_users)
-  # end
+
+  def events_hash
+    parse(@connection.get "/users/#{@user.username}/events")
+  end
+
+  def received_events_hash
+    parse(@connection.get "/users/#{@user.username}/received_events")
+  end
 end

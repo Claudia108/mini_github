@@ -5,14 +5,10 @@ class ReposController < ApplicationController
     @repos = Repo.all
   end
 
-  def show
-    @repo = Repo.find_by(:username)
-  end
-
   private
 
   def initialize_repo
   service = GithubService.new(current_user)
-  Repo.inititalize_service(service)
+  Repo.initialize_service(service)
   end
 end

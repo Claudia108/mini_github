@@ -15,7 +15,7 @@ class UserLogsInWithGithubTest < ActionDispatch::IntegrationTest
     assert page.has_link?("Logout")
   end
 
-  test "user views account information on show_page" do
+  test "logged in user views account information on show_page" do
     visit '/'
     click_link "Sign in with Github"
     assert_equal "/dashboard", current_path

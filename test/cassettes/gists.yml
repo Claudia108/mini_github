@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Thu, 26 May 2016 00:32:30 GMT
+      - Thu, 26 May 2016 19:37:50 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,9 +33,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4999'
+      - '4905'
       X-Ratelimit-Reset:
-      - '1464226350'
+      - '1464293702'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -67,9 +67,9 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Served-By:
-      - 173530fed4bbeb1e264b2ed22e8b5c20
+      - 139317cebd6caf9cd03889139437f00b
       X-Github-Request-Id:
-      - 3F910F63:12714:4279567:5746441E
+      - 3F910F63:1C0C1:7C7926E:5747508E
     body:
       encoding: ASCII-8BIT
       string: '[{"url":"https://api.github.com/gists/22de995a4bcf33e283eb362c71d0a615","forks_url":"https://api.github.com/gists/22de995a4bcf33e283eb362c71d0a615/forks","commits_url":"https://api.github.com/gists/22de995a4bcf33e283eb362c71d0a615/commits","id":"22de995a4bcf33e283eb362c71d0a615","git_pull_url":"https://gist.github.com/22de995a4bcf33e283eb362c71d0a615.git","git_push_url":"https://gist.github.com/22de995a4bcf33e283eb362c71d0a615.git","html_url":"https://gist.github.com/22de995a4bcf33e283eb362c71d0a615","files":{"setting_expectations.markdown":{"filename":"setting_expectations.markdown","type":"text/plain","language":"Markdown","raw_url":"https://gist.githubusercontent.com/Claudia108/22de995a4bcf33e283eb362c71d0a615/raw/1c77c118ab8d9045a1ae2aaa1a42ed8091ab49e4/setting_expectations.markdown","size":2468}},"public":true,"created_at":"2016-04-18T21:31:42Z","updated_at":"2016-04-19T14:09:49Z","description":"Setting
@@ -77,5 +77,5 @@ http_interactions:
         ":{"filename":"ModelsDatabasesRelationships.md ","type":"text/plain","language":null,"raw_url":"https://gist.githubusercontent.com/Claudia108/5ad4a673d1eef08930581ced450d06ef/raw/e23d1c7cd42aee43bfb3df2f6581c34373ab2693/ModelsDatabasesRelationships.md%20","size":1790}},"public":true,"created_at":"2016-04-05T15:04:39Z","updated_at":"2016-04-05T19:41:25Z","description":"","comments":0,"user":null,"comments_url":"https://api.github.com/gists/5ad4a673d1eef08930581ced450d06ef/comments","owner":{"login":"Claudia108","id":15485124,"avatar_url":"https://avatars.githubusercontent.com/u/15485124?v=3","gravatar_id":"","url":"https://api.github.com/users/Claudia108","html_url":"https://github.com/Claudia108","followers_url":"https://api.github.com/users/Claudia108/followers","following_url":"https://api.github.com/users/Claudia108/following{/other_user}","gists_url":"https://api.github.com/users/Claudia108/gists{/gist_id}","starred_url":"https://api.github.com/users/Claudia108/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Claudia108/subscriptions","organizations_url":"https://api.github.com/users/Claudia108/orgs","repos_url":"https://api.github.com/users/Claudia108/repos","events_url":"https://api.github.com/users/Claudia108/events{/privacy}","received_events_url":"https://api.github.com/users/Claudia108/received_events","type":"User","site_admin":false},"truncated":false},{"url":"https://api.github.com/gists/580ad1dcb22d3ccddd13","forks_url":"https://api.github.com/gists/580ad1dcb22d3ccddd13/forks","commits_url":"https://api.github.com/gists/580ad1dcb22d3ccddd13/commits","id":"580ad1dcb22d3ccddd13","git_pull_url":"https://gist.github.com/580ad1dcb22d3ccddd13.git","git_push_url":"https://gist.github.com/580ad1dcb22d3ccddd13.git","html_url":"https://gist.github.com/580ad1dcb22d3ccddd13","files":{"cfu_crud_in_sinatra.markdown":{"filename":"cfu_crud_in_sinatra.markdown","type":"text/plain","language":"Markdown","raw_url":"https://gist.githubusercontent.com/Claudia108/580ad1dcb22d3ccddd13/raw/1c261b654dcd49cae993990566256f10d252d816/cfu_crud_in_sinatra.markdown","size":1292}},"public":true,"created_at":"2016-03-22T21:17:34Z","updated_at":"2016-03-23T04:18:43Z","description":"CRUD
         in Sinatra -- Check for Understanding","comments":1,"user":null,"comments_url":"https://api.github.com/gists/580ad1dcb22d3ccddd13/comments","owner":{"login":"Claudia108","id":15485124,"avatar_url":"https://avatars.githubusercontent.com/u/15485124?v=3","gravatar_id":"","url":"https://api.github.com/users/Claudia108","html_url":"https://github.com/Claudia108","followers_url":"https://api.github.com/users/Claudia108/followers","following_url":"https://api.github.com/users/Claudia108/following{/other_user}","gists_url":"https://api.github.com/users/Claudia108/gists{/gist_id}","starred_url":"https://api.github.com/users/Claudia108/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Claudia108/subscriptions","organizations_url":"https://api.github.com/users/Claudia108/orgs","repos_url":"https://api.github.com/users/Claudia108/repos","events_url":"https://api.github.com/users/Claudia108/events{/privacy}","received_events_url":"https://api.github.com/users/Claudia108/received_events","type":"User","site_admin":false},"truncated":false},{"url":"https://api.github.com/gists/36b73b5f70ab6f757172","forks_url":"https://api.github.com/gists/36b73b5f70ab6f757172/forks","commits_url":"https://api.github.com/gists/36b73b5f70ab6f757172/commits","id":"36b73b5f70ab6f757172","git_pull_url":"https://gist.github.com/36b73b5f70ab6f757172.git","git_push_url":"https://gist.github.com/36b73b5f70ab6f757172.git","html_url":"https://gist.github.com/36b73b5f70ab6f757172","files":{"Intro_to_sinatra_check.md":{"filename":"Intro_to_sinatra_check.md","type":"text/plain","language":"Markdown","raw_url":"https://gist.githubusercontent.com/Claudia108/36b73b5f70ab6f757172/raw/af0f812f1184e4e7fc91c0ff101a3de31fdaf642/Intro_to_sinatra_check.md","size":785}},"public":true,"created_at":"2016-03-21T17:08:58Z","updated_at":"2016-03-22T04:50:09Z","description":"","comments":1,"user":null,"comments_url":"https://api.github.com/gists/36b73b5f70ab6f757172/comments","owner":{"login":"Claudia108","id":15485124,"avatar_url":"https://avatars.githubusercontent.com/u/15485124?v=3","gravatar_id":"","url":"https://api.github.com/users/Claudia108","html_url":"https://github.com/Claudia108","followers_url":"https://api.github.com/users/Claudia108/followers","following_url":"https://api.github.com/users/Claudia108/following{/other_user}","gists_url":"https://api.github.com/users/Claudia108/gists{/gist_id}","starred_url":"https://api.github.com/users/Claudia108/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Claudia108/subscriptions","organizations_url":"https://api.github.com/users/Claudia108/orgs","repos_url":"https://api.github.com/users/Claudia108/repos","events_url":"https://api.github.com/users/Claudia108/events{/privacy}","received_events_url":"https://api.github.com/users/Claudia108/received_events","type":"User","site_admin":false},"truncated":false}]'
     http_version: 
-  recorded_at: Thu, 26 May 2016 00:32:30 GMT
+  recorded_at: Thu, 26 May 2016 19:37:53 GMT
 recorded_with: VCR 3.0.3
