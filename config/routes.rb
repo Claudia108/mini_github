@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   get '/user/repos', to: 'repos#index'
+  get '/dashboard', to: 'users#show', as: :user
   get '/gists', to: 'gists#index'
   get '/users', to: 'users#index'
 end

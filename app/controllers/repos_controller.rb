@@ -5,9 +5,9 @@ class ReposController < ApplicationController
     @repos = Repo.all
   end
 
-  # def show
-  #   @repo = Repo.find(params[:id])
-  # end
+  def show
+    @repo = Repo.find_by(:username)
+  end
 
   private
 

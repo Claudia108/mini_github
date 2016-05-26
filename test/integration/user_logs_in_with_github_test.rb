@@ -10,27 +10,19 @@ class UserLogsInWithGithubTest < ActionDispatch::IntegrationTest
     visit '/'
     assert_equal 200, page.status_code
     click_link "Sign in with Github"
-    assert_equal "/", current_path
+    assert_equal "/dashboard", current_path
     assert page.has_content?("Claudia")
     assert page.has_link?("Logout")
   end
 
-  # def stub_omniauth
-  #   # first, set OmniAuth to run in test mode
-  #   OmniAuth.config.test_mode = true
-  #   # then, provide a set of fake oauth data that
-  #   # omniauth will use when a user tries to authenticate:
-  #   OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
-  #     provider: 'github',
-  #     uid: "1234",
-  #     info: {
-  #       name: "Claudia",
-  #       nickname: "claudia",
-  #       email: "me@me.com",
-  #     },
-  #     credentials: {
-  #       token: "fun"
-  #     }
-  #   })
-  # end
+  test "user views account information on show_page" do
+    visit '/'
+    click_link "Sign in with Github"
+    assert_equal "/dashboard", current_path
+    assert page.has_content?("Claudia")
+    assert page.has_css?("img[src*='https://avatars.githubusercontent.com/u/15485124?v=3']")
+    assert page.has_content?("Your Followers")
+    assert page.has_content?("Your Following")
+    assert page.has_link?("Logout")
+  end
 end

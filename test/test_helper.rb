@@ -34,10 +34,17 @@ class ActiveSupport::TestCase
       info: {
         name: "Claudia Kiesenhofer",
         nickname: "Claudia108",
+        image: "https://avatars.githubusercontent.com/u/15485124?v=3",
         email: "me@me.com"
       },
       credentials: {
         token: ENV["USER_TOKEN"]
+      },
+      extra: {
+        raw_info: {
+          following: 3,
+          followers: 5
+        }
       }
     })
   end

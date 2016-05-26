@@ -8,8 +8,4 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
-  #
-  # def github_service
-  #   GithubService.new(current_user)
-  # end
 end

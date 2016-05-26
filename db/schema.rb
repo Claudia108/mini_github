@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160525155058) do
+ActiveRecord::Schema.define(version: 20160526023749) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(version: 20160525155058) do
     t.datetime "updated_at",  null: false
     t.string   "username"
     t.string   "email"
+    t.string   "profile_pic"
+    t.integer  "followers"
+    t.integer  "following"
   end
 
 end

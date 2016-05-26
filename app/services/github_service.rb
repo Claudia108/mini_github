@@ -25,6 +25,13 @@ class GithubService
     parse(get_gists)
   end
 
+  def get_repos_of_user
+    @connection.get "/user/:username/repos"
+  end
+
+  def repos_of_user_hash
+    parse(get_repos_of_user)
+  end
   # def get_users
   #   @connection.get "/users"
   # end
