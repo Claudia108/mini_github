@@ -1,5 +1,5 @@
 <div class="container">
-  <h1> My Repos</h1>
+  <h1>Your Repos</h1>
   <ul>
     <% @repos.each do |repo| %>
     <li><%= link_to repo_name(repo), repo.html_url, target: "_blank" %> </li>

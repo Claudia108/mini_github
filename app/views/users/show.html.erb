@@ -1,9 +1,15 @@
 <div class="container">
   <h1> <%= current_user.name %>, welcome to your Mini Github!</h1>
-
+  <br>
   <img src="<%= current_user.profile_pic %>"/>
+  <br><br>
   <p>Your Followers: <%= current_user.followers %></p>
   <p>Your Following: <%= current_user.following %></p>
+  <p>Starred Repos: <%= @service.starred_hash %> </p>
 
-
+  <p>Organizations you are a member of:</p>
+    <% @service.orgs_hash.each do |org_hash| %>
+    <li><%= link_to org_hash[:login], org_hash[:avatar_url], target: "_blank" %></li>
+    <% end %>
+  </ul>
 </div>
