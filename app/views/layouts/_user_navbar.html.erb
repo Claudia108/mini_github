@@ -1,0 +1,21 @@
+  </div>
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <a class="navbar-brand" href="/dashboard">Mini-Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+          <a href="/user/repos">My Repos</a>
+      </li>
+      <li>
+          <a href="/gists">My Gists</a>
+      </li>
+      <li>
+          <a href="/users/:username/events">My Commits</a>
+      </li>
+      <li>
+          <a href="/users/:username/received_events">Received Events</a>
+      </li>
+          <li><%= link_to "Hello, #{current_user.name}!", user_path %></li>
+          <li><%= link_to "Logout", logout_path, method: :delete %></li>
+    </ul>
+
+  </div>

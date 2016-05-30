@@ -8,8 +8,7 @@ class UserViewsGistsTest < ActionDispatch::IntegrationTest
 
   test "user needs to login to view their gists" do
     visit '/'
-    click_link "My Gists"
-    assert_equal "/", current_path
+    assert page.has_no_content?("My Gists")
     assert page.has_content?("Please login to access your information!")
 
     click_link "Sign in with Github"
@@ -24,8 +23,7 @@ class UserViewsGistsTest < ActionDispatch::IntegrationTest
 
     click_link "Logout"
     assert_equal "/", current_path
-    click_link "My Gists"
-    assert_equal "/", current_path
+    assert page.has_no_content?("My Gists")
     assert page.has_content?("Please login to access your information!")
   end
 
